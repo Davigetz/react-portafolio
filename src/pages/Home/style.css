@@ -1,0 +1,8 @@
+.container-nav {
+  display: flex;
+  justify-content: center;
+  max-width: 1080px;
+  background-color: white;
+  width: 1080px;
+  width: calc(100%-240px);
+}

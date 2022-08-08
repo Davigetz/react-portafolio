@@ -1,0 +1,99 @@
+{
+    "basics": {
+        "name":"David Gómez",
+        "label": "Web Developer",
+        "email": "davidstangetz13@gmail.com",
+        "phone":"573208073184",
+        "picture":"mt.png",
+        "x_title": "Hello, I'm",
+        "job1":"Web",
+        "job2":"Developer",
+        "description":"Hello! I'm David! Your web development enthusiast. Always down for something new and challenging!, I'm here to help you.",
+        "summary":"Based in Bogotá.",
+        "keywords":"personal,website,portafolio,template,kit,mark,web,developer,bogotá,react,github,linkedin,google,design,ui,webapp,markdown",
+        "url":"http://localhost:3000",
+        "location": {
+            "address":"Calle 151 #6-28",
+            "postalCode":"110131",
+            "city":"Bogotá",
+            "country":"Colombia",
+            "countrycode":"CO",
+            "region":"Cundinamarca"
+        },
+        "profiles": [
+            {
+                "network":"Google",
+                "username":"davidstangetz13@gmail.com",
+                "url":"mailto:davidstangetz13@gmail.com",
+                "x_icon":"fab fa-google"
+            },
+            {
+                "network":"LinkedIn",
+                "username":"davigetz-developer",
+                "url":"https://www.linkedin.com/in/davigetz-developer/",
+                "x_icon":"fab fa-linkedin-in"
+            },
+            {
+                "network": "GitHub",
+                "username": "Davigetz",
+                "url": "https://github.com/Davigetz",
+                "x_icon": "fab fa-github"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "Henry",
+            "position": "Academic",
+            "website": "https://www.talent.soyhenry.com/?hl=en",
+            "startDate": "2022-04-01",
+            "endDate": "2022-07-06",
+            "summary": "Description develop habilities to work in group. Work as team with scrum methodologies",
+            "highlights": ["Started the company"]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University",
+            "area": "Chemical Engineer",
+            "studyType": "Bachelor",
+            "startDate": "2011-01-01",
+            "endDate": "2018-05-01",
+            "gpa": "3.3",
+            "courses": ["Matlab, VBA, Python, Eulor convergence metodologies, Runge-Kutta-4order"]
+        }
+    ],
+    "skills": [
+        {
+            "name": "Web Development",
+            "level": "Junior",
+            "keywords": ["HTML", "CSS", "Javascript", "React"]
+        }
+    ],
+    "languages": [
+        {
+            "language": "German",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "English",
+            "fluency": "Fluent speaker"
+        },
+        {
+            "language": "French",
+            "fluency": "Good knowledge"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Music",
+            "keywords": ["Piano", "Jazz"]
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Doe",
+            "reference": "Reference..."
+        }
+    ]
+}

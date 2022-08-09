@@ -12,6 +12,7 @@ export interface stateProps {
 
 export const SideBar: React.FC<stateProps> = ({ state }) => {
   const [clicked, setClicked] = useState(false);
+  console.log(state);
   return (
     <div
       className="sidebar"
@@ -114,6 +115,84 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
             {Resume.basics.profiles[2].network}
           </span>
         </li>
+        {state.root! < 700 && (
+          <>
+            <li>
+              <a href="#projects">
+                <i className="fa-solid fa-bars-progress"></i>
+                <span
+                  className="link_name"
+                  style={{
+                    opacity: `${clicked ? 1 : 0}`,
+                    pointerEvents: `${clicked ? "auto" : "none"}`,
+                    display: `${clicked ? "block" : "none"}`,
+                    fontSize: `${15}px`,
+                  }}
+                >
+                  Projects
+                </span>
+              </a>
+              <span className={`tooltip ${clicked ? "active" : ""}`}>
+                Projects
+              </span>
+            </li>
+            <li>
+              <a href="#about">
+                <i className="fa-solid fa-user-tie"></i>
+                <span
+                  className="link_name"
+                  style={{
+                    opacity: `${clicked ? 1 : 0}`,
+                    pointerEvents: `${clicked ? "auto" : "none"}`,
+                    display: `${clicked ? "block" : "none"}`,
+                    fontSize: `${15}px`,
+                  }}
+                >
+                  About
+                </span>
+              </a>
+              <span className={`tooltip ${clicked ? "active" : ""}`}>
+                About
+              </span>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fa-solid fa-house-user"></i>
+                <span
+                  className="link_name"
+                  style={{
+                    opacity: `${clicked ? 1 : 0}`,
+                    pointerEvents: `${clicked ? "auto" : "none"}`,
+                    display: `${clicked ? "block" : "none"}`,
+                    fontSize: `${15}px`,
+                  }}
+                >
+                  Home
+                </span>
+              </a>
+              <span className={`tooltip ${clicked ? "active" : ""}`}>Home</span>
+            </li>
+            <li>
+              <a href="#contact">
+                <i className="fa-solid fa-circle-info"></i>
+                <span
+                  className="link_name"
+                  style={{
+                    opacity: `${clicked ? 1 : 0}`,
+                    pointerEvents: `${clicked ? "auto" : "none"}`,
+                    display: `${clicked ? "block" : "none"}`,
+                    fontSize: `${15}px`,
+                  }}
+                >
+                  Contact
+                </span>
+              </a>
+              <span className={`tooltip ${clicked ? "active" : ""}`}>
+                Contact
+              </span>
+            </li>
+          </>
+        )}
       </ul>
     </div>
   );

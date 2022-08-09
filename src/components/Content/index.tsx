@@ -10,9 +10,11 @@ export const Content = ({ marginTop }: { marginTop: Number }) => {
       className="container"
       style={{ marginTop: `${marginTop}px` }}
     >
-      <h4 className="title name">{Resume.basics.name}</h4>
-      <h1 className="title job">{Resume.basics.job1} +</h1>
-      <h1 className="title job">{Resume.basics.job2}</h1>
+      <div className="titles-container">
+        <h4 className="title name">{Resume.basics.name}</h4>
+        <h1 className="title job">{Resume.basics.job1} +</h1>
+        <h1 className="title job">{Resume.basics.job2}</h1>
+      </div>
     </section>
   );
 };

@@ -7,8 +7,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: 12em;
+  align-items: center;
+}
+
+.titles-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 60%;
 }
 .title {
   color: rgb(255, 21, 69);

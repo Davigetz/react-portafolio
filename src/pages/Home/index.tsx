@@ -34,7 +34,7 @@ export const Home = () => {
   }, []);
   return (
     <div className="container-nav" ref={ref}>
-      <Navigation />
+      <Navigation state={state} />
       <SideBar state={state} />
       <Content marginTop={0} />
       <Works />

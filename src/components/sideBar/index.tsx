@@ -17,7 +17,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
       className="sidebar"
       style={{
         left: `${
-          +state.root! === +state.containerHome!
+          +state.root! <= +state.containerHome!
             ? 0
             : (+state.root! - +state.containerHome!) / 2
         }px`,
@@ -29,9 +29,11 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
           className="logo"
           style={{ opacity: `${clicked ? 1 : 0}`, minWidth: "250px" }}
         >
-          <div className="container-logo radial side">
-            <Logo deseo={10} />
-          </div>
+          <a href="#">
+            <div className="container-logo radial side">
+              <Logo deseo={10} />
+            </div>
+          </a>
           <div
             className="logo_name"
             style={{
@@ -56,10 +58,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
           <span className={`tooltip ${clicked ? "active" : ""}`}>Search</span>
         </li> */}
         <li>
-          <a
-            href={Resume.basics.profiles[0].url}
-            style={{ justifyContent: `${clicked ? "flex-start" : "center"}` }}
-          >
+          <a href={Resume.basics.profiles[0].url}>
             <i className="fa-brands fa-google"></i>
             <span
               className="link_name"
@@ -78,11 +77,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
           </span>
         </li>
         <li>
-          <a
-            href={Resume.basics.profiles[1].url}
-            style={{ justifyContent: `${clicked ? "flex-start" : "center"}` }}
-            target="_blank"
-          >
+          <a href={Resume.basics.profiles[1].url} target="_blank">
             <i className="fab fa-linkedin-in"></i>
             <span
               className="link_name"
@@ -101,11 +96,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
           </span>
         </li>
         <li>
-          <a
-            href={Resume.basics.profiles[2].url}
-            style={{ justifyContent: `${clicked ? "flex-start" : "center"}` }}
-            target="_blank"
-          >
+          <a href={Resume.basics.profiles[2].url} target="_blank">
             <i className="fa-brands fa-github"></i>
             <span
               className="link_name"
@@ -120,7 +111,6 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
             </span>
           </a>
           <span className={`tooltip ${clicked ? "active" : ""}`}>
-            {" "}
             {Resume.basics.profiles[2].network}
           </span>
         </li>

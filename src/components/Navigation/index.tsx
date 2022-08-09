@@ -8,9 +8,12 @@ export const Navigation = () => {
 
   return (
     <nav className="navi">
-      <div className="container-logo radial">
-        <Logo deseo={15} />
-      </div>
+      <a href="#">
+        <div className="container-logo radial">
+          <Logo deseo={15} />
+        </div>
+      </a>
+
       <a
         href="#"
         className={activeNav === "#" ? "active" : "no-active"}

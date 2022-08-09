@@ -5,10 +5,14 @@ import { ToggleTheme } from "../ApplyTheme/toggleTheme";
 
 export const Content = ({ marginTop }: { marginTop: Number }) => {
   return (
-    <div className="container" style={{ marginTop: `${marginTop}px` }}>
-      <h5 className="title">{Resume.basics.name}</h5>
-      <h2 className="title">{Resume.basics.job1} +</h2>
-      <h2 className="title">{Resume.basics.job2}</h2>
-    </div>
+    <section
+      id="#"
+      className="container"
+      style={{ marginTop: `${marginTop}px` }}
+    >
+      <h4 className="title name">{Resume.basics.name}</h4>
+      <h1 className="title job">{Resume.basics.job1} +</h1>
+      <h1 className="title job">{Resume.basics.job2}</h1>
+    </section>
   );
 };

@@ -4,7 +4,6 @@
 }
 
 #root {
-  min-height: 1390px;
   display: flex;
   justify-content: center;
   background: rgb(251, 63, 216);
@@ -28,6 +27,12 @@
       rgb(203 50 255 / 94%),
       transparent 2080px
     );
+}
+
+@media screen and (max-width: 1080) {
+  #root {
+    display: block;
+  }
 }
 
 body {

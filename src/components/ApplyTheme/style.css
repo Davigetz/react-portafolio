@@ -1,7 +1,4 @@
-.switch-container {
-}
-
-label {
+.labele {
   display: flex;
   width: 50px;
   height: 35px;
@@ -15,34 +12,34 @@ label {
   transition: 0.3s;
 }
 
-label i {
+.labele i {
   font-size: 18px;
 }
-label .fa-sun {
+.labele .fa-sun {
   color: gold;
   transition: 0.4s ease-in-out;
   opacity: 1;
 }
-label .fa-moon {
+.labele .fa-moon {
   color: #fff;
   opacity: 0;
   transform: translateX(32px);
   transition: 0.4s ease-in-out;
 }
 
-label .ball {
+.labele .ball {
   display: none;
 }
 
-label .fa-sun.active {
+.labele .fa-sun.active {
   transform: translateX(-32px);
   opacity: 0;
 }
-label .fa-moon.active {
+.labele .fa-moon.active {
   transform: translateX(0);
   opacity: 1;
 }
-label .ball {
+.labele .ball {
   position: absolute;
   display: block;
   width: 25px;
@@ -59,7 +56,7 @@ label .ball {
   transition: 0.2s ease-in-out;
 }
 
-label .ball.active {
+.labele .ball.active {
   transform: translateX(29px);
   background: #222;
   opacity: 1;

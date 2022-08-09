@@ -1,10 +1,7 @@
-import { useDispatch } from "react-redux";
-import { changeTheme } from "./redux/recipes/theme.Slice";
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { lazy } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { HelmetMeta } from "./components/Helmet/HelmetMeta";
-import { lazy, useEffect, useState } from "react";
 import { Home } from "./pages/Home";
 
 const NotFound = lazy(() =>

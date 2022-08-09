@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import { About } from "../../components/About";
 import { ToggleTheme } from "../../components/ApplyTheme/toggleTheme";
+import { Contact } from "../../components/Contact";
 import { Content } from "../../components/Content";
 import { Navigation } from "../../components/Navigation";
 import { SideBar, stateProps } from "../../components/sideBar";
+import { Works } from "../../components/Works";
 import "./style.css";
 
 export const Home = () => {
@@ -34,6 +37,9 @@ export const Home = () => {
       <Navigation />
       <SideBar state={state} />
       <Content marginTop={0} />
+      <Works />
+      <About />
+      <Contact />
     </div>
   );
 };

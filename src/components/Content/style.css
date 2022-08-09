@@ -7,10 +7,20 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  margin-left: 12em;
 }
 .title {
   color: rgb(255, 21, 69);
   text-shadow: -1px 0px 0px rgb(255 183 220);
   margin: 10px 0;
+}
+
+.title.job {
+  font-size: 90px;
+}
+
+.title.name {
+  margin-bottom: 40px;
+  margin-top: 60px;
 }

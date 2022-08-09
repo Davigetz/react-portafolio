@@ -8,7 +8,7 @@
         "x_title": "Hello, I'm",
         "job1":"Web",
         "job2":"Developer",
-        "description":"Hello! I'm David! Your web development enthusiast. Always down for something new and challenging!, I'm here to help you.",
+        "description":"I'm David! I'm passionate about generating new ways of interacting. I love 😋 programming, I am hungry for new knowledge. I'm a professional when it comes to working individually or in a group, therefore I consider that human relations and teamwork are essential to do what you are passionate about.",
         "summary":"Based in Bogotá.",
         "keywords":"personal,website,portafolio,template,kit,mark,web,developer,bogotá,react,github,linkedin,google,design,ui,webapp,markdown",
         "url":"http://localhost:3000",
@@ -53,8 +53,15 @@
         }
     ],
     "education": [
+        {"institution": "Henry",
+        "area": "Full Stack Developer ",
+        "studyType": "BootCamp",
+        "startDate": "2022-03-22",
+        "endDate": "2018-07-04",
+        "gpa": "4",
+        "courses": ["React, PostgresQl, Sequelize, Express, Nodejs, HTML, CSS"]},
         {
-            "institution": "University",
+            "institution": "Universidad de la Sabana",
             "area": "Chemical Engineer",
             "studyType": "Bachelor",
             "startDate": "2011-01-01",

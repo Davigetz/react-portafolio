@@ -26,6 +26,16 @@
   font-size: 90px;
 }
 
+@media screen and (max-width: 700px) {
+  .title.job {
+    font-size: 80px;
+  }
+
+  .title {
+    margin: 0;
+  }
+}
+
 .title.name {
   margin-bottom: 40px;
   margin-top: 60px;

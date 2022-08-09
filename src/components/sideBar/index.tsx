@@ -23,6 +23,15 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
             : (+state.root! - +state.containerHome!) / 2
         }px`,
         width: `${clicked ? 240 : 40}px`,
+        height: `${
+          state.root! < 700
+            ? clicked
+              ? "-webkit-fill-available"
+              : "50px"
+            : "-webkit-fill-available"
+        }`,
+        borderBottomLeftRadius: `${state.root! < 700 ? "12px" : "0px"}`,
+        borderBottomRightRadius: `${state.root! < 700 ? "12px" : "0px"}`,
       }}
     >
       <div className="logo_content">
@@ -58,8 +67,14 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
           <input type="text" placeholder="Search..." />
           <span className={`tooltip ${clicked ? "active" : ""}`}>Search</span>
         </li> */}
-        <li>
-          <a href={Resume.basics.profiles[0].url}>
+        <li
+          style={{
+            display: `${
+              state.root! < 700 ? (clicked ? "block" : "none") : "block"
+            }`,
+          }}
+        >
+          <a href={Resume.basics.profiles[0].url} target="_blank">
             <i className="fa-brands fa-google"></i>
             <span
               className="link_name"
@@ -77,7 +92,13 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
             {Resume.basics.profiles[0].network}
           </span>
         </li>
-        <li>
+        <li
+          style={{
+            display: `${
+              state.root! < 700 ? (clicked ? "block" : "none") : "block"
+            }`,
+          }}
+        >
           <a href={Resume.basics.profiles[1].url} target="_blank">
             <i className="fab fa-linkedin-in"></i>
             <span
@@ -96,7 +117,13 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
             {Resume.basics.profiles[1].network}
           </span>
         </li>
-        <li>
+        <li
+          style={{
+            display: `${
+              state.root! < 700 ? (clicked ? "block" : "none") : "block"
+            }`,
+          }}
+        >
           <a href={Resume.basics.profiles[2].url} target="_blank">
             <i className="fa-brands fa-github"></i>
             <span
@@ -117,7 +144,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
         </li>
         {state.root! < 700 && (
           <>
-            <li>
+            <li style={{ display: `${clicked ? "block" : "none"}` }}>
               <a href="#projects">
                 <i className="fa-solid fa-bars-progress"></i>
                 <span
@@ -132,11 +159,8 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
                   Projects
                 </span>
               </a>
-              <span className={`tooltip ${clicked ? "active" : ""}`}>
-                Projects
-              </span>
             </li>
-            <li>
+            <li style={{ display: `${clicked ? "block" : "none"}` }}>
               <a href="#about">
                 <i className="fa-solid fa-user-tie"></i>
                 <span
@@ -151,11 +175,8 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
                   About
                 </span>
               </a>
-              <span className={`tooltip ${clicked ? "active" : ""}`}>
-                About
-              </span>
             </li>
-            <li>
+            <li style={{ display: `${clicked ? "block" : "none"}` }}>
               <a href="#">
                 <i className="fa-solid fa-house-user"></i>
                 <span
@@ -170,9 +191,8 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
                   Home
                 </span>
               </a>
-              <span className={`tooltip ${clicked ? "active" : ""}`}>Home</span>
             </li>
-            <li>
+            <li style={{ display: `${clicked ? "block" : "none"}` }}>
               <a href="#contact">
                 <i className="fa-solid fa-circle-info"></i>
                 <span
@@ -187,9 +207,6 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
                   Contact
                 </span>
               </a>
-              <span className={`tooltip ${clicked ? "active" : ""}`}>
-                Contact
-              </span>
             </li>
           </>
         )}

@@ -12,7 +12,6 @@ export interface stateProps {
 
 export const SideBar: React.FC<stateProps> = ({ state }) => {
   const [clicked, setClicked] = useState(false);
-  console.log(state);
   return (
     <div
       className="sidebar"

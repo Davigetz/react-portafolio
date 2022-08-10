@@ -6,6 +6,18 @@
   min-width: 600px;
 }
 
+@media screen and (max-width: 820px) {
+  .forma {
+    min-width: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .forma {
+    min-width: 200px;
+  }
+}
+
 .area {
   margin-top: 2rem !important;
 }

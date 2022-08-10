@@ -18,8 +18,6 @@ export const Works = () => {
     };
   }, []);
 
-  console.log(windowSize);
-
   return (
     <section id="projects" style={{ marginTop: "4em" }}>
       {Proyects.map((proyect, index) => (

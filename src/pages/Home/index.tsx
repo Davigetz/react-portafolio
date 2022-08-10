@@ -18,10 +18,6 @@ export const Home = () => {
   const getSize = () => {
     const newWidth = ref.current?.clientWidth;
     const newRootWidth = document.getElementById("root")?.clientWidth;
-    console.info("root");
-    console.log(newRootWidth);
-    console.info("width");
-    console.log(newWidth);
 
     setState({ ...state, root: newRootWidth, containerHome: newWidth });
   };

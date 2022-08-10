@@ -1,6 +1,6 @@
 import React, { DetailedHTMLProps, FormHTMLAttributes, useState } from "react";
 import "./style.css";
-import { error, state, validation } from "./types";
+import { error, state, validation, validationType } from "./types";
 
 export const Contact = () => {
   const [state, setState] = useState<state>({
@@ -13,6 +13,8 @@ export const Contact = () => {
     (key?: string, sanitizeFn?: (key: string) => any) =>
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const value = sanitizeFn ? sanitizeFn(e.target.value) : e.target.value;
+      console.info("ingrese handleChange");
+      console.log(value);
       setState({ ...state, [key!]: value });
     };
 
@@ -23,7 +25,7 @@ export const Contact = () => {
       name: {
         required: {
           value: true,
-          message: "need a name to comunicate properly",
+          message: "I need a name to comunicate properly",
         },
       },
       email: {
@@ -32,8 +34,15 @@ export const Contact = () => {
           message: "I need a email to contact with",
         },
         pattern: {
-          value: "/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/",
+          value:
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
           message: "You have entered an invalid email address!",
+        },
+      },
+      message: {
+        required: {
+          value: true,
+          message: " I need a message to read, Please Provide some Message",
         },
       },
     };
@@ -42,17 +51,22 @@ export const Contact = () => {
       let valid = true;
       const newErrors: state = { name: "", email: "", message: "" };
       for (const key in validations) {
+        console.log(state);
         const value = state[key as keyof state];
+        console.log(value);
         const validation = validations[key as keyof validation];
-        console.log(validation);
-        if (validation.required?.value && !value) {
-          console.log("entre");
+        if (validation?.required?.value && !value) {
           valid = false;
-          newErrors[key as keyof state] = validation.required.message;
-          console.log(newErrors);
+          newErrors[key as keyof state] = validation?.required?.message;
         }
 
-        // const pattern = validation?.pattern;
+        const pattern = validation?.pattern;
+        console.log(pattern);
+        console.log(value);
+        if (pattern?.value && !RegExp(pattern.value).test(value)) {
+          valid = false;
+          newErrors[key as keyof state] = pattern.message;
+        }
 
         if (!valid) {
           setErrors(newErrors);
@@ -74,7 +88,7 @@ export const Contact = () => {
                 placeholder="Name"
                 name="name"
                 id="name"
-                // required
+                value={state.name}
                 onChange={handleChange("name")}
               />
               <label className="form__label">Name</label>
@@ -82,12 +96,13 @@ export const Contact = () => {
             </div>
             <div className="form__group field">
               <input
-                type="input"
+                type="email"
                 className="form__field"
                 placeholder="Email"
                 name="email"
                 id="email"
-                // required
+                value={state.email}
+                onChange={handleChange("email")}
               />
               <label className="form__label">Email</label>
               {errors.email && <p>{errors.email}</p>}
@@ -98,6 +113,9 @@ export const Contact = () => {
                 placeholder="Message"
                 name="message"
                 id="message"
+                value={state.message}
+                // @ts-ignore
+                onChange={handleChange("message")}
                 // required
               />
               <label className="form__label__area">Message</label>

@@ -1,19 +1,17 @@
 export type validation = {
-  name: {
-    required?: {
-      value: boolean;
-      message: string;
-    };
+  name: validationType;
+  email: validationType;
+  message: validationType;
+};
+
+export type validationType = {
+  required?: {
+    value: boolean;
+    message: string;
   };
-  email: {
-    required?: {
-      value: boolean;
-      message: string;
-    };
-    pattern?: {
-      value: string;
-      message: string;
-    };
+  pattern?: {
+    value: RegExp;
+    message: string;
   };
 };
 

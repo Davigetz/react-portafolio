@@ -1,3 +1,7 @@
+.switch-container {
+  user-select: none;
+}
+
 .labele {
   display: flex;
   width: 50px;

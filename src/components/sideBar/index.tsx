@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Resume from "../../utils/resume.json";
 import { Logo } from "../Logo";
+import { useOnClickOutside } from "./clickOutside";
 import "./style.css";
 
 export interface stateProps {
@@ -12,6 +13,8 @@ export interface stateProps {
 
 export const SideBar: React.FC<stateProps> = ({ state }) => {
   const [clicked, setClicked] = useState(false);
+  const ref = useRef(null);
+  useOnClickOutside(ref, () => setClicked(false));
   return (
     <div
       className="sidebar"
@@ -32,6 +35,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
         borderBottomLeftRadius: `${state.root! < 700 ? "12px" : "0px"}`,
         borderBottomRightRadius: `${state.root! < 700 ? "12px" : "0px"}`,
       }}
+      ref={ref}
     >
       <div className="logo_content">
         <div
@@ -144,6 +148,22 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
         {state.root! < 700 && (
           <>
             <li style={{ display: `${clicked ? "block" : "none"}` }}>
+              <a href="#">
+                <i className="fa-solid fa-house-user"></i>
+                <span
+                  className="link_name"
+                  style={{
+                    opacity: `${clicked ? 1 : 0}`,
+                    pointerEvents: `${clicked ? "auto" : "none"}`,
+                    display: `${clicked ? "block" : "none"}`,
+                    fontSize: `${15}px`,
+                  }}
+                >
+                  Home
+                </span>
+              </a>
+            </li>
+            <li style={{ display: `${clicked ? "block" : "none"}` }}>
               <a href="#projects">
                 <i className="fa-solid fa-bars-progress"></i>
                 <span
@@ -175,22 +195,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
                 </span>
               </a>
             </li>
-            <li style={{ display: `${clicked ? "block" : "none"}` }}>
-              <a href="#">
-                <i className="fa-solid fa-house-user"></i>
-                <span
-                  className="link_name"
-                  style={{
-                    opacity: `${clicked ? 1 : 0}`,
-                    pointerEvents: `${clicked ? "auto" : "none"}`,
-                    display: `${clicked ? "block" : "none"}`,
-                    fontSize: `${15}px`,
-                  }}
-                >
-                  Home
-                </span>
-              </a>
-            </li>
+
             <li style={{ display: `${clicked ? "block" : "none"}` }}>
               <a href="#contact">
                 <i className="fa-solid fa-circle-info"></i>

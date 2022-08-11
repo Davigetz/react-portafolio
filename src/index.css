@@ -1,6 +1,12 @@
 :root {
   --primary: #25c8ca;
   --back: #fafafa;
+  --text: black;
+  --shadowTitle: -1px 0px 0px rgb(255 183 220);
+  --shadowSide: 0 8px 32px 0 rgb(31 38 135 / 37%);
+  --shadowContainerLogo: 0px 4px 5px 1px rgb(31 38 135 / 37%);
+  --containerLogo: rgb(255, 21, 69);
+  --LogoFill: white;
 }
 
 #root {

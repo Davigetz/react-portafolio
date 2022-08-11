@@ -13,13 +13,25 @@ const themeSlice = createSlice({
       console.log(action);
       if (action.payload === "lightTheme") {
         state.theme = {
-          "--primary": `${Settings.colors.primary}`,
-          "--back": `${Settings.colors.white}`,
+          "--primary": `${Settings.colors.secondary}`,
+          "--back": `${Settings.colors.black}`,
+          "--text": `${Settings.colors.textsecondary}`,
+          "--shadowTitle": `${Settings.colors.shadowTitleDark}`,
+          "--shadowSide": `${Settings.colors.shadowsideNight}`,
+          "--shadowContainerLogo": `${Settings.colors.containerLogoShadowNight}`,
+          "--containerLogo": `${Settings.colors.containerLogoNight}`,
+          "--LogoFill": `${Settings.colors.fillLogoNight}`,
         };
       } else if (action.payload === "darkTheme") {
         state.theme = {
-          "--primary": `${Settings.colors.secondary}`,
-          "--back": `${Settings.colors.black}`,
+          "--primary": `${Settings.colors.primary}`,
+          "--back": `${Settings.colors.white}`,
+          "--text": `${Settings.colors.textprimary}`,
+          "--shadowTitle": `${Settings.colors.shadowTitleDay}`,
+          "--shadowSide": `${Settings.colors.shadowsideDay}`,
+          "--shadowContainerLogo": `${Settings.colors.containerLogoShadowDay}`,
+          "--containerLogo": `${Settings.colors.containerLogoDay}`,
+          "--LogoFill": `${Settings.colors.fillLogoDay}`,
         };
       }
     },

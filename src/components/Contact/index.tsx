@@ -2,6 +2,8 @@ import React, { DetailedHTMLProps, FormHTMLAttributes, useState } from "react";
 import "./style.css";
 import { error, state, validation, validationType } from "./types";
 
+const sgMail = require("@sendgrid/mail");
+
 export const Contact = () => {
   const [state, setState] = useState<state>({
     name: "",
@@ -61,8 +63,6 @@ export const Contact = () => {
         }
 
         const pattern = validation?.pattern;
-        console.log(pattern);
-        console.log(value);
         if (pattern?.value && !RegExp(pattern.value).test(value)) {
           valid = false;
           newErrors[key as keyof state] = pattern.message;
@@ -75,6 +75,20 @@ export const Contact = () => {
         setErrors({});
       }
     }
+  };
+
+  const sendMail = async () => {
+    const sgMail = require("@sendgrid/mail");
+    sgMail.setApiKey(
+      "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"
+    );
+    const msg = {
+      to: "elhirech.95@gmail.com",
+      from: "test@example.com",
+      subject: "Sending with Twilio SendGrid is Fun",
+      text: "and easy to do anywhere, even with Node.js",
+      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+    };
   };
   return (
     <section id="contact">

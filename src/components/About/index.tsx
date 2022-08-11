@@ -1,6 +1,6 @@
 import React from "react";
 import Resume from "../../utils/resume.json";
-import Me from "../../assets/DavidGomez.png";
+import Me from "../../assets/DG.png";
 import "./style.css";
 
 export const About = () => {

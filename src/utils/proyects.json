@@ -10,7 +10,7 @@
 {
     "id":2,
     "title":"[Academic] Front-end Developer - E-commerce",
-    "descriptions":["Design and develop an Ecommerce App that includes: searches, filtering, ordering, deletion, editing and inventory creation.","Develop a working group with SCRUM and Git-Flow methodologies: to move a project forward.","Implement Log-in with Third Parties (Google, Auth0)."
+    "descriptions":["Design and develop an Ecommerce App that includes: searches, filtering, ordering, deletion, editing and inventory creation.","Develop a working group with SCRUM and Git-Flow methodologies: to move a project forward.","Implement Log-in with Third Parties (Google, Auth0). Also it was used from Mercadopago its SDK and API "
     ,"Develop the app using React, Redux, CSS, Styled Components in the Front and in the Back developed in Node.js with Express, PostgreSQL and Sequelize Database, Nodemailer, authorization cookies from the Backend to the Frontend."],
     "tecnologies":["Css3", "Html5","React","Axios","Nodejs","Dotenv","JsonWebToken","Sequelize","PostgreSQL","Cookie-Session","Bcrypt","Mercadopago","Framer-Motion","React-Icons","Redux","<Recharts />","Styled Icons 💅","Leaflet","React OAuth2 | Google","React-Toastify"],
     "link":"https://pro-ropa-store.vercel.app/",

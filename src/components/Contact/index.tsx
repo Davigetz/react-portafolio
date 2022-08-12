@@ -1,8 +1,13 @@
-import React, { DetailedHTMLProps, FormHTMLAttributes, useState } from "react";
+import React, {
+  DetailedHTMLProps,
+  FormHTMLAttributes,
+  useRef,
+  useState,
+} from "react";
 import "./style.css";
 import { error, state, validation, validationType } from "./types";
 
-const sgMail = require("@sendgrid/mail");
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
   const [state, setState] = useState<state>({
@@ -10,7 +15,10 @@ export const Contact = () => {
     email: "",
     message: "",
   });
+  const form = useRef<HTMLFormElement>(null);
   const [errors, setErrors] = useState<error>({});
+  const [loading, setLoading] = useState(false);
+  const [errorMail, setErrorMail] = useState(null);
   const handleChange =
     (key?: string, sanitizeFn?: (key: string) => any) =>
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -72,29 +80,34 @@ export const Contact = () => {
           setErrors(newErrors);
           return;
         }
-        setErrors({});
       }
     }
+
+    setLoading(true);
+    setErrors({});
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_ID!,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+        form.current!,
+        process.env.REACT_APP_EMAILJS_PUBLIC_ID!
+      )
+      .then((r) => {
+        setLoading(false);
+        setState({ ...state, name: "", email: "", message: "" });
+        console.log(r);
+      })
+      .catch((error) => {
+        console.log(error.text);
+        setErrorMail(error.text);
+      });
   };
 
-  const sendMail = async () => {
-    const sgMail = require("@sendgrid/mail");
-    sgMail.setApiKey(
-      "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"
-    );
-    const msg = {
-      to: "elhirech.95@gmail.com",
-      from: "test@example.com",
-      subject: "Sending with Twilio SendGrid is Fun",
-      text: "and easy to do anywhere, even with Node.js",
-      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-    };
-  };
   return (
     <section id="contact">
       <div className="contact-container">
         <div>
-          <form className="forma" onSubmit={handleSubmit}>
+          <form className="forma" onSubmit={handleSubmit} ref={form}>
             <div className="form__group field">
               <input
                 type="input"

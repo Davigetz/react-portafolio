@@ -34,6 +34,10 @@
   box-shadow: rgba(0, 0, 0, 0.76) 0px 3px 8px;
 }
 
+.linkes > a > p {
+  color: #4b00aa;
+}
+
 .proyect {
   max-width: 1080px;
   display: flex;

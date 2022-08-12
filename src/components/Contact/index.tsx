@@ -15,10 +15,10 @@ export const Contact = () => {
     email: "",
     message: "",
   });
+  const [errorMailjs, setErrorMailjs] = useState(null);
   const form = useRef<HTMLFormElement>(null);
   const [errors, setErrors] = useState<error>({});
-  const [loading, setLoading] = useState(false);
-  const [errorMail, setErrorMail] = useState(null);
+  const [loadingSuccess, setLoadingSucces] = useState("");
   const handleChange =
     (key?: string, sanitizeFn?: (key: string) => any) =>
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -83,7 +83,7 @@ export const Contact = () => {
       }
     }
 
-    setLoading(true);
+    setLoadingSucces("animate");
     setErrors({});
     emailjs
       .sendForm(
@@ -93,13 +93,20 @@ export const Contact = () => {
         process.env.REACT_APP_EMAILJS_PUBLIC_ID!
       )
       .then((r) => {
-        setLoading(false);
-        setState({ ...state, name: "", email: "", message: "" });
+        setLoadingSucces("success");
+        setTimeout(() => {
+          setLoadingSucces("");
+          setState({ ...state, name: "", email: "", message: "" });
+        }, 1000);
+
         console.log(r);
       })
       .catch((error) => {
+        setLoadingSucces("error");
         console.log(error.text);
-        setErrorMail(error.text);
+        setTimeout(() => {
+          setErrorMailjs(error.text);
+        }, 1000);
       });
   };
 
@@ -123,7 +130,7 @@ export const Contact = () => {
             </div>
             <div className="form__group field">
               <input
-                type="email"
+                type="input"
                 className="form__field"
                 placeholder="Email"
                 name="email"
@@ -148,9 +155,14 @@ export const Contact = () => {
               <label className="form__label__area">Message</label>
               {errors.message && <p>{errors.message}</p>}
             </div>
-            <button type="submit" value="send">
+            <button
+              className={`button ${loadingSuccess}`}
+              type="submit"
+              value="send"
+            >
               Send
             </button>
+            {errorMailjs && <p>{errorMailjs}</p>}
           </form>
         </div>
       </div>

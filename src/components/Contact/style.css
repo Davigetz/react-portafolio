@@ -4,6 +4,7 @@
 
 .forma {
   min-width: 600px;
+  padding-bottom: 100px;
 }
 
 @media screen and (max-width: 820px) {

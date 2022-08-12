@@ -11,6 +11,29 @@
   /* margin-left: 90px; */
 }
 
+.linkes {
+  display: flex;
+}
+
+.linkes > a {
+  margin: 0 15px;
+  background-color: var(--primary);
+  padding: 0 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.linkes > a:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 3px 8px;
+}
+
+.linkes > a:active {
+  box-shadow: rgba(0, 0, 0, 0.76) 0px 3px 8px;
+}
+
 .proyect {
   max-width: 1080px;
   display: flex;
@@ -44,7 +67,7 @@
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 100px;
-    grid-template-rows: 1fr 300px;
+    grid-template-rows: 1fr 400px;
     align-items: flex-start;
     margin-left: 50px;
   }

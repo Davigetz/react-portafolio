@@ -34,6 +34,18 @@ export const Works = () => {
             {proyect.descriptions.map((description) => (
               <p>{description}</p>
             ))}
+            <div className="linkes">
+              <a href={proyect.repositorio} target="_blank">
+                <p>
+                  Repository: <i className="fa-brands fa-github"></i>
+                </p>
+              </a>
+              <a href={proyect.link} target="_blank">
+                <p>
+                  Link: <i className="fa-solid fa-globe"></i>
+                </p>
+              </a>
+            </div>
           </div>
           <div className="icons">
             {proyect.tecnologies.map((tec) => {

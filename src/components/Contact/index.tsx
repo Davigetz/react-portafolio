@@ -139,7 +139,7 @@ export const Contact = () => {
                 onChange={handleChange("email")}
               />
               <label className="form__label">Email</label>
-              {errors.email && <p>{errors.email}</p>}
+              {errors.email && <p className="errors">{errors.email}</p>}
             </div>
             <div className="form__group area">
               <textarea

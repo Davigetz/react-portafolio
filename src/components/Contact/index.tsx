@@ -126,7 +126,7 @@ export const Contact = () => {
                 onChange={handleChange("name")}
               />
               <label className="form__label">Name</label>
-              {errors.name && <p>{errors.name}</p>}
+              {errors.name && <p className="errors">{errors.name}</p>}
             </div>
             <div className="form__group field">
               <input
@@ -153,7 +153,7 @@ export const Contact = () => {
                 // required
               />
               <label className="form__label__area">Message</label>
-              {errors.message && <p>{errors.message}</p>}
+              {errors.message && <p className="errors">{errors.message}</p>}
             </div>
             <button
               className={`button ${loadingSuccess}`}
@@ -162,7 +162,7 @@ export const Contact = () => {
             >
               Send
             </button>
-            {errorMailjs && <p>{errorMailjs}</p>}
+            {errorMailjs && <p className="errors">{errorMailjs}</p>}
           </form>
         </div>
       </div>

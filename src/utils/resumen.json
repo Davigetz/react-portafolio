@@ -4,13 +4,13 @@
         "label": "Web Developer",
         "email": "davidstangetz13@gmail.com",
         "phone":"573208073184",
-        "picture":"mt.png",
-        "x_title": "Hello, I'm",
+        "picture":"me.png",
+        "x_title": "Hola, Soy",
         "job1":"Web",
-        "job2":"Developer",
-        "description":"I'm David! I'm passionate about generating new ways of interacting. I love 😋 programming, I am eager to learn new things. I'm a professional when it comes to working individually or in a group, therefore I consider that human relations and teamwork are essential to do what you are passionate about.",
-        "summary":"Based in Bogotá.",
-        "keywords":"personal,website,portafolio,template,kit,mark,web,developer,bogotá,react,github,linkedin,google,design,ui,webapp,markdown",
+        "job2":"Desarrollador",
+        "description":"Soy David David! estoy apasionado en generar nuevas maneras de interacciones. Amo 😋 programar, Estoy deseo de aplicar nuevos conocimientos. Soy un profesional trabajando individualmente, asi mismo, cuando trabajo en grupos, considero que las relaciones humanas y el trabajo en equipo son esenciales para sobresalir con lo que te apasiona.",
+        "summary":"De Bogota Bogotá.",
+        "keywords":"personal,website,portafolio,plantilla,kit,mark,web,developer,bogotá,react,github,linkedin,google,design,ui,webapp,markdown",
         "url":"https://davidgetz-developer.onrender.com/",
         "location": {
             "address":"Calle 151 #6-28",
@@ -48,8 +48,8 @@
             "website": "https://www.talent.soyhenry.com/?hl=en",
             "startDate": "2022-04-01",
             "endDate": "2022-07-06",
-            "summary": "Description develop habilities to work in group. Work as team with scrum methodologies",
-            "highlights": ["work team"]
+            "summary": "Desarrollo para trabajar en grupo y individualmente. Trabajo en grupo con las metodologías agiles SCRUM",
+            "highlights": ["worl team"]
         }
     ],
     "education": [

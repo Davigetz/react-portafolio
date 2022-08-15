@@ -1,6 +1,7 @@
 import React, {
   DetailedHTMLProps,
   FormHTMLAttributes,
+  useEffect,
   useRef,
   useState,
 } from "react";
@@ -9,12 +10,39 @@ import { error, state, validation, validationType } from "./types";
 
 import emailjs from "@emailjs/browser";
 
-export const Contact = () => {
+interface contactProps {
+  language: string;
+}
+
+export const Contact: React.FC<contactProps> = ({ language }) => {
+  const [textos, setTextos] = useState({
+    name: "",
+    email: "",
+    message: "",
+    send: "",
+  });
   const [state, setState] = useState<state>({
     name: "",
     email: "",
     message: "",
   });
+  useEffect(() => {
+    if (language === "es") {
+      setTextos({
+        name: "Nombre",
+        email: "Mail",
+        message: "Mensaje",
+        send: "Enviar",
+      });
+    } else {
+      setTextos({
+        name: "Name",
+        email: "Email",
+        message: "Message",
+        send: "Send",
+      });
+    }
+  }, [language]);
   const [errorMailjs, setErrorMailjs] = useState(null);
   const form = useRef<HTMLFormElement>(null);
   const [errors, setErrors] = useState<error>({});
@@ -125,7 +153,7 @@ export const Contact = () => {
                 value={state.name}
                 onChange={handleChange("name")}
               />
-              <label className="form__label">Name</label>
+              <label className="form__label">{textos.name}</label>
               {errors.name && <p className="errors">{errors.name}</p>}
             </div>
             <div className="form__group field">
@@ -138,7 +166,7 @@ export const Contact = () => {
                 value={state.email}
                 onChange={handleChange("email")}
               />
-              <label className="form__label">Email</label>
+              <label className="form__label">{textos.email}</label>
               {errors.email && <p className="errors">{errors.email}</p>}
             </div>
             <div className="form__group area">
@@ -152,7 +180,7 @@ export const Contact = () => {
                 onChange={handleChange("message")}
                 // required
               />
-              <label className="form__label__area">Message</label>
+              <label className="form__label__area">{textos.message}</label>
               {errors.message && <p className="errors">{errors.message}</p>}
             </div>
             <button
@@ -160,7 +188,7 @@ export const Contact = () => {
               type="submit"
               value="send"
             >
-              Send
+              {textos.send}
             </button>
             {errorMailjs && <p className="errors">{errorMailjs}</p>}
           </form>

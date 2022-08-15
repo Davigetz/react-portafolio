@@ -1,7 +1,7 @@
 [{
     "id":1,
     "title":"[Academic] Full Stack Web Developer – Food App",
-    "descriptions":["Design and develop a Food App that includes: searching, filtering, ordering, deleting, editing and creating recipes.","Develop the app using React in the frontend, @toolkit-redux, pure CSS and in the Back developed in Node.js with Express, PostgreSQL Database and Sequelize."],
+    "descriptions":["Diseñar y desarrollar una aplicación ecommerce que incluya: busquedas, filtros, ordenamiento, eliminar, editar e inventorios de creación","Desarrollar una aplicación mediante en React en frontend, @toolkit-redux, solo CSS (sin uso de librerias externas) y en el backend desarrollo en Node.js con Express, base de datos con PostgreSQL y Sequelize."],
     "tecnologies":["Css3", "Html5", "React", "@reduxjs/toolkit","Nodejs", "PostgreSQL", "Sequelize"],
     "link":"https://github.com/Davigetz/Pi-foods-finalizado",
     "repositorio":"https://github.com/Davigetz/Pi-foods-finalizado",
@@ -10,8 +10,8 @@
 {
     "id":2,
     "title":"[Academic] Front-end Developer - E-commerce",
-    "descriptions":["Design and develop an Ecommerce App that includes: searches, filtering, ordering, deletion, editing and inventory creation.","Led a working group with scrum and Git-Flow methodologies: to move a project forward.","Implement Log-in with Third Parties (Google, Auth0). Also it was used from Mercadopago its SDK and API "
-    ,"Develop the app using React, Redux, CSS, Styled Components in the Front and in the Back developed in Node.js with Express, PostgreSQL and Sequelize Database, Nodemailer, authorization cookies from the Backend to the Frontend. Using Cloudinary to store products as images online."],
+    "descriptions":["Diseñar y desarrollar una aplicación ecommerce que incluya: busquedas, filtros, ordenamiento, eliminar, editar e inventorios de creación","Liderar un trabajo en grupo con metodologías SCRUM y GIT-FLOW: para sacar el proyecto adelante.","Implementar metodos de autenticación y autorización, asi como, metódos de pago con Mercadopago con su SDK y API."
+    ,"Aplicacion desarrollada con React, Redux, CSS, Styled Components en el Front y en el Back con Node.js with Express, PostgreSQL y Sequelize para la base de datos, Nodemailer, authorization mediante cookies desde el Backend hacia el Frontend, colocar las imagenes de los productos online mediante Cloudinary."],
     "tecnologies":["Css3", "Html5","React","Axios","Nodejs","Dotenv","JsonWebToken","Sequelize","PostgreSQL","Cookie-Session","Bcrypt","Mercadopago","Framer-Motion","React-Icons","Redux","<Recharts />","Styled Icons 💅","Leaflet","React OAuth2 | Google","React-Toastify"],
     "link":"https://pro-ropa-store.vercel.app/",
     "repositorio":"https://github.com/Davigetz/e-commerce-pf",

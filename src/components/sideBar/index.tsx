@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Resume from "../../utils/resume.json";
 import { Logo } from "../Logo";
 import { useOnClickOutside } from "./clickOutside";
@@ -9,12 +9,39 @@ export interface stateProps {
     root: Number | undefined;
     containerHome: Number | undefined;
   };
+  language: string;
 }
 
-export const SideBar: React.FC<stateProps> = ({ state }) => {
+export const SideBar: React.FC<stateProps> = ({ state, language }) => {
   const [clicked, setClicked] = useState(false);
+  const [textos, setTextos] = useState({
+    home: "",
+    proyects: "",
+    about: "",
+    contact: "",
+  });
   const ref = useRef(null);
   useOnClickOutside(ref, () => setClicked(false));
+
+  useEffect(() => {
+    if (language === "es") {
+      setTextos({
+        ...textos,
+        home: "Casa",
+        proyects: "Proyectos",
+        about: "Acerca",
+        contact: "Contacto",
+      });
+    } else {
+      setTextos({
+        ...textos,
+        home: "Home",
+        proyects: "Projects",
+        about: "About",
+        contact: "Contact",
+      });
+    }
+  }, [language]);
   return (
     <div
       className="sidebar"
@@ -159,7 +186,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
                     fontSize: `${15}px`,
                   }}
                 >
-                  Home
+                  {textos.home}
                 </span>
               </a>
             </li>
@@ -175,7 +202,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
                     fontSize: `${15}px`,
                   }}
                 >
-                  Projects
+                  {textos.proyects}
                 </span>
               </a>
             </li>
@@ -191,7 +218,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
                     fontSize: `${15}px`,
                   }}
                 >
-                  About
+                  {textos.about}
                 </span>
               </a>
             </li>
@@ -208,7 +235,7 @@ export const SideBar: React.FC<stateProps> = ({ state }) => {
                     fontSize: `${15}px`,
                   }}
                 >
-                  Contact
+                  {textos.contact}
                 </span>
               </a>
             </li>

@@ -9,6 +9,7 @@ import { Works } from "../../components/Works";
 import "./style.css";
 
 export const Home = () => {
+  const [language, setLanguage] = useState("en");
   const [state, setState] = useState<{
     root: Number | undefined;
     containerHome: Number | undefined;
@@ -28,14 +29,28 @@ export const Home = () => {
   useEffect(() => {
     window.addEventListener("resize", getSize);
   }, []);
+
+  useEffect(() => {
+    const userLocale =
+      navigator.languages && navigator.languages.length
+        ? navigator.languages[0]
+        : navigator.language;
+    console.log(userLocale);
+    const predoLanguage = userLocale.split("-")[0];
+    if (predoLanguage === "es") {
+      setLanguage("es");
+    } else {
+      setLanguage("en");
+    }
+  }, []);
   return (
     <div className="container-nav" ref={ref}>
-      <Navigation state={state} />
-      <SideBar state={state} />
-      <Content marginTop={0} />
-      <Works />
-      <About />
-      <Contact />
+      <Navigation state={state} language={language} />
+      <SideBar state={state} language={language} />
+      <Content marginTop={0} language={language} />
+      <Works language={language} />
+      <About language={language} />
+      <Contact language={language} />
     </div>
   );
 };

@@ -42,6 +42,7 @@ export const SideBar: React.FC<stateProps> = ({ state, language }) => {
       });
     }
   }, [language]);
+  console.log(state);
   return (
     <div
       className="sidebar"
@@ -49,7 +50,7 @@ export const SideBar: React.FC<stateProps> = ({ state, language }) => {
         left: `${
           +state.root! <= +state.containerHome!
             ? 0
-            : (+state.root! - +state.containerHome!) / 2
+            : (+state.root! - +state.containerHome! - 20) / 2
         }px`,
         width: `${clicked ? 240 : 40}px`,
         height: `${

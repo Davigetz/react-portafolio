@@ -54,14 +54,14 @@ export const SideBar: React.FC<stateProps> = ({ state, language }) => {
         }px`,
         width: `${clicked ? 240 : 40}px`,
         height: `${
-          state.root! < 700
+          state.root! < 750
             ? clicked
               ? "-webkit-fill-available"
               : "50px"
             : "-webkit-fill-available"
         }`,
-        borderBottomLeftRadius: `${state.root! < 700 ? "12px" : "0px"}`,
-        borderBottomRightRadius: `${state.root! < 700 ? "12px" : "0px"}`,
+        borderBottomLeftRadius: `${state.root! < 750 ? "12px" : "0px"}`,
+        borderBottomRightRadius: `${state.root! < 750 ? "12px" : "0px"}`,
       }}
       ref={ref}
     >
@@ -101,7 +101,7 @@ export const SideBar: React.FC<stateProps> = ({ state, language }) => {
         <li
           style={{
             display: `${
-              state.root! < 700 ? (clicked ? "block" : "none") : "block"
+              state.root! < 750 ? (clicked ? "block" : "none") : "block"
             }`,
           }}
         >
@@ -126,7 +126,7 @@ export const SideBar: React.FC<stateProps> = ({ state, language }) => {
         <li
           style={{
             display: `${
-              state.root! < 700 ? (clicked ? "block" : "none") : "block"
+              state.root! < 750 ? (clicked ? "block" : "none") : "block"
             }`,
           }}
         >
@@ -151,7 +151,7 @@ export const SideBar: React.FC<stateProps> = ({ state, language }) => {
         <li
           style={{
             display: `${
-              state.root! < 700 ? (clicked ? "block" : "none") : "block"
+              state.root! < 750 ? (clicked ? "block" : "none") : "block"
             }`,
           }}
         >
@@ -173,7 +173,7 @@ export const SideBar: React.FC<stateProps> = ({ state, language }) => {
             {Resume.basics.profiles[2].network}
           </span>
         </li>
-        {state.root! < 700 && (
+        {state.root! < 750 && (
           <>
             <li style={{ display: `${clicked ? "block" : "none"}` }}>
               <a href="#">

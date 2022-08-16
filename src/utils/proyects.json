@@ -1,20 +1,78 @@
-[{
-    "id":1,
-    "title":"[Academic] Full Stack Web Developer – Food App",
-    "descriptions":["Design and develop a Food App that includes: searching, filtering, ordering, deleting, editing and creating recipes.","Develop the app using React in the frontend, @toolkit-redux, pure CSS and in the Back developed in Node.js with Express, PostgreSQL Database and Sequelize."],
-    "tecnologies":["Css3", "Html5", "React", "@reduxjs/toolkit","Nodejs", "PostgreSQL", "Sequelize"],
-    "link":"https://github.com/Davigetz/Pi-foods-finalizado",
-    "repositorio":"https://github.com/Davigetz/Pi-foods-finalizado",
-    "images":["https://user-images.githubusercontent.com/19938780/182600150-0d201fc7-fe88-40fd-973b-7d3a17f9dfea.png","https://user-images.githubusercontent.com/19938780/182600264-9bda9fde-7ad5-41be-ad51-d2911b03ce6c.png","https://user-images.githubusercontent.com/19938780/182600350-5492455e-27cc-489f-9ffb-b54c34ee5910.png"]
-},
-{
-    "id":2,
-    "title":"[Academic] Front-end Developer - E-commerce",
-    "descriptions":["Design and develop an Ecommerce App that includes: searches, filtering, ordering, deletion, editing and inventory creation.","Led a working group with scrum and Git-Flow methodologies: to move a project forward.","Implement Log-in with Third Parties (Google, Auth0). Also it was used from Mercadopago its SDK and API "
-    ,"Develop the app using React, Redux, CSS, Styled Components in the Front and in the Back developed in Node.js with Express, PostgreSQL and Sequelize Database, Nodemailer, authorization cookies from the Backend to the Frontend. Using Cloudinary to store products as images online."],
-    "tecnologies":["Css3", "Html5","React","Axios","Nodejs","Dotenv","JsonWebToken","Sequelize","PostgreSQL","Cookie-Session","Bcrypt","Mercadopago","Framer-Motion","React-Icons","Redux","<Recharts />","Styled Icons 💅","Leaflet","React OAuth2 | Google","React-Toastify"],
-    "link":"https://pro-ropa-store.vercel.app/",
-    "repositorio":"https://github.com/Davigetz/e-commerce-pf",
-    "images":["https://user-images.githubusercontent.com/19938780/182596921-4f0474ca-0c78-48bf-9c7a-156d77e2934f.png","https://user-images.githubusercontent.com/19938780/182597191-3701a181-b797-4d46-b5f5-da050739d833.png","https://user-images.githubusercontent.com/92419425/178786166-98768f39-64c2-4e46-a6a7-89e798d34629.png"]
-}
+[
+  {
+    "id": 1,
+    "title": "[Academic] Full Stack Web Developer – Food App",
+    "descriptions": [
+      "Design and develop a Food App that includes: searching, filtering, ordering, deleting, editing and creating recipes.",
+      "Develop the app using React in the frontend, @toolkit-redux, pure CSS and in the Back developed in Node.js with Express, PostgreSQL Database and Sequelize."
+    ],
+    "tecnologies": [
+      "Css3",
+      "Html5",
+      "React",
+      "@reduxjs/toolkit",
+      "Nodejs",
+      "PostgreSQL",
+      "Sequelize"
+    ],
+    "link": "https://github.com/Davigetz/Pi-foods-finalizado",
+    "repositorio": "https://github.com/Davigetz/Pi-foods-finalizado",
+    "images": [
+      "https://user-images.githubusercontent.com/19938780/182600150-0d201fc7-fe88-40fd-973b-7d3a17f9dfea.png",
+      "https://user-images.githubusercontent.com/19938780/182600264-9bda9fde-7ad5-41be-ad51-d2911b03ce6c.png",
+      "https://user-images.githubusercontent.com/19938780/182600350-5492455e-27cc-489f-9ffb-b54c34ee5910.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "[Academic] Front-end Developer - E-commerce",
+    "descriptions": [
+      "Design and develop an Ecommerce App that includes: searches, filtering, ordering, deletion, editing and inventory creation.",
+      "Led a working group with scrum and Git-Flow methodologies: to move a project forward.",
+      "Implement Log-in with Third Parties (Google, Auth0). Also it was used from Mercadopago its SDK and API ",
+      "Develop the app using React, Redux, CSS, Styled Components in the Front and in the Back developed in Node.js with Express, PostgreSQL and Sequelize Database, Nodemailer, authorization cookies from the Backend to the Frontend. Using Cloudinary to store products as images online."
+    ],
+    "tecnologies": [
+      "Css3",
+      "Html5",
+      "React",
+      "Axios",
+      "Nodejs",
+      "Dotenv",
+      "JsonWebToken",
+      "Sequelize",
+      "PostgreSQL",
+      "Cookie-Session",
+      "Bcrypt",
+      "Mercadopago",
+      "Framer-Motion",
+      "React-Icons",
+      "Redux",
+      "<Recharts />",
+      "Styled Icons 💅",
+      "Leaflet",
+      "React OAuth2 | Google",
+      "React-Toastify"
+    ],
+    "link": "https://pro-ropa-store.vercel.app/",
+    "repositorio": "https://github.com/Davigetz/e-commerce-pf",
+    "images": [
+      "https://user-images.githubusercontent.com/19938780/182596921-4f0474ca-0c78-48bf-9c7a-156d77e2934f.png",
+      "https://user-images.githubusercontent.com/19938780/182597191-3701a181-b797-4d46-b5f5-da050739d833.png",
+      "https://user-images.githubusercontent.com/92419425/178786166-98768f39-64c2-4e46-a6a7-89e798d34629.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "[Academic] Full Stack Nextjs - Blog",
+    "descriptions": [
+      "This is a project to see how the static Props and static paths works, Later on I prove how dynamic routes works with nextjs"
+    ],
+    "tecnologies": ["React", "Css3", "Html5", "Nextjs"],
+    "repositorio": "https://github.com/Davigetz/e-commerce-pf",
+    "link": "https://nextjs-blog-two-azure-80.vercel.app/",
+    "images": [
+      "https://user-images.githubusercontent.com/19938780/184965309-d13993e2-de4e-428f-b6bf-92f8565d99d1.png"
+    ]
+  }
 ]

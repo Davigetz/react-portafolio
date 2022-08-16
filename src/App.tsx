@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { HelmetMeta } from "./components/Helmet/HelmetMeta";
@@ -11,9 +11,23 @@ const NotFound = lazy(() =>
 );
 
 function App() {
+  const [language, setLanguage] = useState("en");
+  useEffect(() => {
+    const userLocale =
+      navigator.languages && navigator.languages.length
+        ? navigator.languages[0]
+        : navigator.language;
+    console.log(userLocale);
+    const predoLanguage = userLocale.split("-")[0];
+    if (predoLanguage === "es") {
+      setLanguage("es");
+    } else {
+      setLanguage("en");
+    }
+  }, []);
   return (
     <Router>
-      <HelmetMeta />
+      <HelmetMeta language={language} />
       <Switch>
         <Route exact path="/">
           <Home />

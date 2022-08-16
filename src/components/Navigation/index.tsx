@@ -43,7 +43,7 @@ export const Navigation = ({ state, language }: NavigationProps) => {
 
   return (
     <nav className="navi">
-      {state.root! > 700 && (
+      {state.root! > 750 && (
         <>
           <a href="#">
             <div className="container-logo radial">

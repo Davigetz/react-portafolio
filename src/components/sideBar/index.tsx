@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { putLanguage } from "../../redux/recipes/language.Slice";
+import { RootState } from "../../redux/store";
 import Resume from "../../utils/resume.json";
 import { Logo } from "../Logo";
 import { useOnClickOutside } from "./clickOutside";
@@ -13,6 +16,8 @@ export interface stateProps {
 }
 
 export const SideBar: React.FC<stateProps> = ({ state, language }) => {
+  const lang = useSelector((state: RootState) => state.language.language);
+  const dispatch = useDispatch();
   const [clicked, setClicked] = useState(false);
   const [textos, setTextos] = useState({
     home: "",
@@ -42,7 +47,6 @@ export const SideBar: React.FC<stateProps> = ({ state, language }) => {
       });
     }
   }, [language]);
-  console.log(state);
   return (
     <div
       className="sidebar"
@@ -98,6 +102,27 @@ export const SideBar: React.FC<stateProps> = ({ state, language }) => {
           <input type="text" placeholder="Search..." />
           <span className={`tooltip ${clicked ? "active" : ""}`}>Search</span>
         </li> */}
+        <li
+          style={{
+            display: `${
+              state.root! < 750 ? (clicked ? "block" : "none") : "block"
+            }`,
+          }}
+          onClick={() => {
+            if (lang === "es") {
+              dispatch(putLanguage("en"));
+            } else {
+              dispatch(putLanguage("es"));
+            }
+          }}
+        >
+          <div className="container-language">
+            <span>{lang}</span>
+          </div>
+          <span className={`tooltip ${clicked ? "active" : ""}`}>
+            {lang === "es" ? "español" : "english"}
+          </span>
+        </li>
         <li
           style={{
             display: `${

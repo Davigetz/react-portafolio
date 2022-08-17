@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
 import { About } from "../../components/About";
 import { ToggleTheme } from "../../components/ApplyTheme/toggleTheme";
 import { Contact } from "../../components/Contact";
@@ -6,10 +7,12 @@ import { Content } from "../../components/Content";
 import { Navigation } from "../../components/Navigation";
 import { SideBar, stateProps } from "../../components/sideBar";
 import { Works } from "../../components/Works";
+import { RootState } from "../../redux/store";
 import "./style.css";
 
 export const Home = () => {
   const [language, setLanguage] = useState("en");
+  const langDesire = useSelector((state: RootState) => state.language.language);
   const [state, setState] = useState<{
     root: Number | undefined;
     containerHome: Number | undefined;
@@ -43,6 +46,15 @@ export const Home = () => {
       setLanguage("en");
     }
   }, []);
+
+  useEffect(() => {
+    if (langDesire === "es") {
+      setLanguage("es");
+    } else {
+      setLanguage("en");
+    }
+  }, [langDesire]);
+
   return (
     <div className="container-nav" ref={ref}>
       <Navigation state={state} language={language} />

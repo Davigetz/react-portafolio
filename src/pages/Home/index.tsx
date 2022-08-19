@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { About } from "../../components/About";
 import { ToggleTheme } from "../../components/ApplyTheme/toggleTheme";
 import { Contact } from "../../components/Contact";
@@ -7,10 +7,12 @@ import { Content } from "../../components/Content";
 import { Navigation } from "../../components/Navigation";
 import { SideBar, stateProps } from "../../components/sideBar";
 import { Works } from "../../components/Works";
+import { putLanguage } from "../../redux/recipes/language.Slice";
 import { RootState } from "../../redux/store";
 import "./style.css";
 
 export const Home = () => {
+  const dispatch = useDispatch();
   const [language, setLanguage] = useState("en");
   const langDesire = useSelector((state: RootState) => state.language.language);
   const [state, setState] = useState<{
@@ -42,8 +44,10 @@ export const Home = () => {
     const predoLanguage = userLocale.split("-")[0];
     if (predoLanguage === "es") {
       setLanguage("es");
+      dispatch(putLanguage("es"));
     } else {
       setLanguage("en");
+      dispatch(putLanguage("en"));
     }
   }, []);
 

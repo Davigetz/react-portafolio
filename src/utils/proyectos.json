@@ -75,5 +75,18 @@
       "https://user-images.githubusercontent.com/19938780/184972081-28d04f70-499e-456b-8aa2-853933eedbb3.png",
       "https://user-images.githubusercontent.com/19938780/184974141-4b6b1206-da02-44c9-844b-a2ceabe52502.png"
     ]
+  },
+  {
+    "id": 4,
+    "title": "Comparación de Sitios Estáticos mediante NEXTJS Vs ASTROJS",
+    "descriptions": [
+      "Proyecto individual el cual se realizó para comparar Nextjs React Vs Astro-Solidjs. Se puede evidenciar en el repositorio la performance en las imagenes. Su implementación rápida optimiza el tiempo de desarrollo. Sin embargo, el sitio estático con astro es mucho más rapido de implementar. Pero hay que cambiar ciertos conceptos primero pensar en HTML y CSS."
+    ],
+    "tecnologies": ["React", "Css3", "Html5", "Nextjs", "Astrojs"],
+    "repositorio": "https://github.com/Davigetz/static-site-comparative",
+    "link": "https://github.com/Davigetz/static-site-comparative",
+    "images": [
+      "https://user-images.githubusercontent.com/19938780/186207442-8adbfa91-680a-4883-b420-f01a029c62b0.png"
+    ]
   }
 ]

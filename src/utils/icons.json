@@ -80,5 +80,9 @@
   {
     "name": "Nextjs",
     "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
+  },
+  {
+    "name": "Astrojs",
+    "src": "/astro.svg"
   }
 ]

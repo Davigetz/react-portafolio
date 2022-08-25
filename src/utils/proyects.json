@@ -82,7 +82,7 @@
     "descriptions": [
       "Individual project which was carried out to compare Nextjs React Vs Astro-Solidjs. The performance in the images can be evidenced in the repository. Its rapid implementation optimizes development time. However, the static site with astro is much faster to implement. But you have to change certain concepts first think about HTML and CSS"
     ],
-    "tecnologies": ["React", "Css3", "Html5", "Nextjs", "Astrojs"],
+    "tecnologies": ["React", "Css3", "Html5", "Nextjs", "Astrojs", "Solidjs"],
     "repositorio": "https://github.com/Davigetz/static-site-comparative",
     "link": "https://github.com/Davigetz/static-site-comparative",
     "images": [
@@ -93,7 +93,7 @@
     "id": 5,
     "title": "Server Side Rendering Nextjs Astrojs",
     "descriptions": [
-      "Individual project which seeks to understand the differences between Next Js Astrojs@1 to render from the server"
+      "Individual project which seeks to understand the differences between Nextjs and Astrojs to render from the server"
     ],
     "tecnologies": ["React", "Css3", "Html5", "Nextjs", "Astrojs", "Solidjs"],
     "repositorio": "https://github.com/Davigetz/server-side-rendering",

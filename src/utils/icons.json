@@ -84,5 +84,9 @@
   {
     "name": "Astrojs",
     "src": "/astro.svg"
+  },
+  {
+    "name": "Solidjs",
+    "src": "https://www.solidjs.com/assets/logo.123b04bc.svg"
   }
 ]

@@ -88,5 +88,18 @@
     "images": [
       "https://user-images.githubusercontent.com/19938780/186207442-8adbfa91-680a-4883-b420-f01a029c62b0.png"
     ]
+  },
+  {
+    "id": 5,
+    "title": "Server Side Rendering Nextjs Astrojs",
+    "descriptions": [
+      "Individual project which seeks to understand the differences between Next Js Astrojs@1 to render from the server"
+    ],
+    "tecnologies": ["React", "Css3", "Html5", "Nextjs", "Astrojs", "Solidjs"],
+    "repositorio": "https://github.com/Davigetz/server-side-rendering",
+    "link": "https://github.com/Davigetz/server-side-rendering",
+    "images": [
+      "https://user-images.githubusercontent.com/19938780/186558365-66827bce-bf24-4576-b211-e3dfe5e04fb7.png"
+    ]
   }
 ]

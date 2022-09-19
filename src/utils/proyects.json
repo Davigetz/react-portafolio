@@ -101,5 +101,35 @@
     "images": [
       "https://user-images.githubusercontent.com/19938780/186558365-66827bce-bf24-4576-b211-e3dfe5e04fb7.png"
     ]
+  },
+  {
+    "id": 6,
+    "title": "Crow C++ Full Stack Easy Development",
+    "descriptions": [
+      "This project was carried out with the intention of seeing the capacity that c++ uses in the web part and how its development has changed over time. As well as looking at how easy or difficult it is to do it."
+    ],
+    "tecnologies": ["Cpp", "Crow", "Cmake", "MongoDB", "Javascript", "Html5"],
+    "images": [
+      "https://user-images.githubusercontent.com/19938780/190447868-f5eb5d73-4735-46a7-a4db-1fba3569b42b.png"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "CPP-WEB",
+    "descriptions": [
+      "This project was carried out with the intention of seeing the capacity that c++ uses in the web part, different technologies than CROW C++ were used to see how much difference there was",
+      "I also check how a library package manager is used as Conan handle all libraries and dependencies and how different posts are made from cpp-httplib"
+    ],
+    "tecnologies": [
+      "Cpp",
+      "cpp-httplib",
+      "nlohmann/json",
+      "inja",
+      "Conan",
+      "Cmake"
+    ],
+    "images": [
+      "https://user-images.githubusercontent.com/19938780/190447868-f5eb5d73-4735-46a7-a4db-1fba3569b42b.png"
+    ]
   }
 ]

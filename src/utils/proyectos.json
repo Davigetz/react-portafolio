@@ -101,5 +101,39 @@
     "images": [
       "https://user-images.githubusercontent.com/19938780/186558365-66827bce-bf24-4576-b211-e3dfe5e04fb7.png"
     ]
+  },
+  {
+    "id": 6,
+    "title": "Crow C++ Facil Full Stack",
+    "descriptions": [
+      "Este proyecto se realizo con la intencion de ver la capacidad que utiliza c++ en parte web y como ha cambiado su derrollo a travez del tiempo. Asi como mirar que tan facil o dificil es realizarlo."
+    ],
+    "tecnologies": ["Cpp", "Crow", "Cmake", "MongoDB", "Javascript", "Html5"],
+    "repositorio": "https://github.com/Davigetz/crow-cpp",
+    "link": "https://github.com/Davigetz/crow-cpp",
+    "images": [
+      "https://user-images.githubusercontent.com/19938780/190447868-f5eb5d73-4735-46a7-a4db-1fba3569b42b.png"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "CPP-WEB",
+    "descriptions": [
+      "Este proyecto se realizo con la intencion de ver la capacidad que utiliza c++ en parte web, Se utilizaron diferentes tecnoligias que CROW C++ par aver que tanta diferencia habian",
+      "Tambien se miro como se utiliza  un manager de paquetes de librerias y asi como se realizan disitntos post desde cpp-httplib"
+    ],
+    "tecnologies": [
+      "Cpp",
+      "cpp-httplib",
+      "nlohmann/json",
+      "inja",
+      "Conan",
+      "Cmake"
+    ],
+    "repositorio": "https://github.com/Davigetz/cppweb",
+    "link": "https://github.com/Davigetz/cppweb",
+    "images": [
+      "https://user-images.githubusercontent.com/19938780/190447868-f5eb5d73-4735-46a7-a4db-1fba3569b42b.png"
+    ]
   }
 ]

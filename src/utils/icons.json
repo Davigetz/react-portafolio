@@ -88,5 +88,38 @@
   {
     "name": "Solidjs",
     "src": "https://www.solidjs.com/assets/logo.123b04bc.svg"
-  }
+  },
+  {
+    "name": "Javascript",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
+  },
+  {
+    "name": "Crow",
+    "src": "/crowlogo_main_color.svg"
+  },
+  {
+    "name": "Cmake",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/cmake/cmake-original.svg"
+  },
+  {
+    "name": "Cpp",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
+  },
+  {
+    "name": "mongoDB",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"
+  },
+  {
+    "name": "cpp-httplib"
+  },
+  {
+    "name": "nlohmann/json"
+  },
+  {
+    "name": "inja"
+  },
+  {
+    "name": "xxhash"
+  },
+  { "name": "Conan", "src": "https://conan.io/img/logo-conan.svg" }
 ]

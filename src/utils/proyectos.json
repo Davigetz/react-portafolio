@@ -120,7 +120,7 @@
     "title": "CPP-WEB",
     "descriptions": [
       "Este proyecto se realizo con la intencion de ver la capacidad que utiliza c++ en parte web, Se utilizaron diferentes tecnoligias que CROW C++ par aver que tanta diferencia habian",
-      "Tambien se miro como se utiliza  un manager de paquetes de librerias y asi como se realizan disitntos post desde cpp-httplib"
+      "Tambien se miro como se utiliza  un manager de paquetes de librerias (CONAN) y asi como se realizan disitntos post desde cpp-httplib"
     ],
     "tecnologies": [
       "Cpp",

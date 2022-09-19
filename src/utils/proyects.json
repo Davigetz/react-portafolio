@@ -93,7 +93,8 @@
     "id": 5,
     "title": "Server Side Rendering Nextjs Astrojs",
     "descriptions": [
-      "Individual project which seeks to understand the differences between Nextjs and Astrojs to render from the server"
+      "Individual project which seeks to understand the differences between Nextjs and Astrojs to render from the server",
+      "We also looked at how a library package manager (CONAN) is used and how different posts are made from cpp-httplib"
     ],
     "tecnologies": ["React", "Css3", "Html5", "Nextjs", "Astrojs", "Solidjs"],
     "repositorio": "https://github.com/Davigetz/server-side-rendering",
